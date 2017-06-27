@@ -8,7 +8,7 @@ var action = [['a', 'b'], ['c', 'd'], ['e', 'f'], ['g', 'h'], ['i', 'j'], ['k', 
 
 //global vars
 var setSit = document.getElementById('sit');
-var choices = document.getElementById('opts');
+var choices = document.getElementById('act');
 
 function Screen(situation, action) {
   this.situation = situation;
