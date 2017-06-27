@@ -29,12 +29,12 @@ function render(i) {
   setSit.textContent = allScreens[i].situation;
 
   var buttonEl = document.createElement('button');
-  buttonEl.textContent = 'a';
+  buttonActionaEl.textContent = 'a';
   buttonEl.setAttribute('id', 'choice1');
   choices.appendChild(buttonEl);
 
   var buttonEl = document.createElement('button');
-  buttonEl.textContent = 'b';
+  buttonActionbEl.textContent = 'b';
   buttonEl.setAttribute('id', 'choice2');
   choices.appendChild(buttonEl);
 }
