@@ -1,9 +1,9 @@
 var allScreens = [];
 //array for situation
-var situation = ['Introductory situation', 'one', 'two', 'three', 'four', 'five', 'six'];
+var situation = ['insert intro', 'one', 'two', 'three', 'four', 'five', 'six'];
 //array for the options that go with the situations
 var option = [
-  ['first action the user can choose that goes with the intro situation', 'second action the user can choose that goes with the intro situation'],
+  ['Who is this? What are you talking about?', 'uh...ok…?'],
 
   ['the user selected the first action in the introductory situation; new situation\'s first action choice', 'the user selected the first action in the introductory situation; new situation\'s second action choice'],
 
