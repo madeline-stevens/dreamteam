@@ -1,8 +1,10 @@
 var allScreens = [];
+
 //array for situation
 var situation = ['one', 'two', 'three', 'four', 'five', 'six'];
+
 //array for the options that go with the situations
-var option = [['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i']];
+var action = [['a', 'b'], ['c', 'd'], ['e', 'f'], ['g', 'h'], ['i', 'j'], ['k', 'l']];
 
 //global vars
 var setSit = document.getElementById('sit');
@@ -10,29 +12,39 @@ var choices = document.getElementById('opts');
 
 function Screen(situation, action) {
   this.situation = situation;
-  this.option = option;
+  this.action = action;
   allScreens.push(this);
 }
 
+//instances
+new Screen(situation['one'], option['a', 'b']);
+new Screen(situation['two'], option['c', 'd']);
+new Screen(situation['three'], option['e', 'f']);
+new Screen(situation['four'], option['g', 'h']);
+new Screen(situation['five'], option['i', 'j']);
+new Screen(situation['six'], option['k', 'l']);
+
 //render function
-function render(index) {
-  setSit.textContent = situation[index];
+function render(i) {
+  setSit.textContent = allScreens[i].situation;
 
   var buttonEl = document.createElement('button');
-  buttonEl.textContent = 'test';
+  buttonEl.textContent = 'a';
+  buttonEl.setAttribute('id', 'choice1');
   choices.appendChild(buttonEl);
 
   var buttonEl = document.createElement('button');
-  buttonEl.textContent = 'test';
-  choices.appendChild(buttonEl);
-
-  var buttonEl = document.createElement('button');
-  buttonEl.textContent = 'test';
+  buttonEl.textContent = 'b';
+  buttonEl.setAttribute('id', 'choice2');
   choices.appendChild(buttonEl);
 }
 
 render(1);
 
 //clear screen
+function clear(){
+  choices.innerHTML = '';
+  setSit.innerHTML = '';
+}
 
 //Event listener/handling for click to move to next screen
