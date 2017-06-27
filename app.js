@@ -3,7 +3,7 @@ var allScreens = [];
 //array for situation
 var situation = ['one', 'two', 'three', 'four', 'five', 'six'];
 
-//array for the options that go with the situations
+//array for the actions that go with the situations
 var action = [['a', 'b'], ['c', 'd'], ['e', 'f'], ['g', 'h'], ['i', 'j'], ['k', 'l']];
 
 //global vars
@@ -17,12 +17,12 @@ function Screen(situation, action) {
 }
 
 //instances
-new Screen(situation['one'], option['a', 'b']);
-new Screen(situation['two'], option['c', 'd']);
-new Screen(situation['three'], option['e', 'f']);
-new Screen(situation['four'], option['g', 'h']);
-new Screen(situation['five'], option['i', 'j']);
-new Screen(situation['six'], option['k', 'l']);
+new Screen(situation['one'], action['a', 'b']);
+new Screen(situation['two'], action['c', 'd']);
+new Screen(situation['three'], action['e', 'f']);
+new Screen(situation['four'], action['g', 'h']);
+new Screen(situation['five'], action['i', 'j']);
+new Screen(situation['six'], action['k', 'l']);
 
 //render function
 function render(i) {
@@ -39,12 +39,15 @@ function render(i) {
   choices.appendChild(buttonEl);
 }
 
-render(1);
+render();
 
 //clear screen
 function clear(){
   choices.innerHTML = '';
   setSit.innerHTML = '';
+
+  if (setSit.innerHTML = 'onw' && choices.innerHTML = 'a')
+
 }
 
 //Event listener/handling for click to move to next screen
