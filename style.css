@@ -76,12 +76,31 @@ li a {
    background-image: url('imgs/window.jpg');
    background-repeat: no-repeat;
    background-size: cover;
+   color: white;
    width: 80%;
    margin: 2% auto;
    border-radius: 25px;
    border: 5px groove silver;
-   height: 500px;
+   height: auto;
  }
+
+.team img {
+  display: inline;
+}
+
+.profile {
+  display: inline;
+  border: 1px solid red;
+}
+
+.profile h2 {
+  display: inline-block;
+}
+
+.profile p {
+  display: inline;
+}
+
 
  #index {
    background-image: url('imgs/raininghouse.gif');
