@@ -1,7 +1,9 @@
 var allScreens = [];
+
 //array for situation
 var situation = ['Introductory situation', 'one', 'two', 'three', 'four', 'five', 'six'];
 //array for the options that go with the situations
+
 var option = [
   ['first action the user can choose that goes with the intro situation', 'second action the user can choose that goes with the intro situation'],
 
@@ -20,12 +22,14 @@ var option = [
 //global vars
 var body = document.getElementById('body');
 var setSit = document.getElementById('sit');
+
 var action1 = document.getElementById('choice1');
 var action2 = document.getElementById('choice2');
 
 function Screen(index) {
   this.situation = situation[index];
   this.option = option[index];
+
   allScreens.push(this);
 }
 
