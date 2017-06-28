@@ -1,5 +1,6 @@
 body {
   background: #111;
+  min-width: 1250px;
 }
 
 header {
@@ -107,6 +108,10 @@ li a {
 }
 
 .team div {
+  background-image: url('imgs/windowboard.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 10px auto;
   width: 85%;
   height: 300px;
