@@ -17,7 +17,7 @@ var situation = [
   //2
   ['I found this old comm. It was dead when I first discovered it. I thought I could fix it up, it looked all busted and broken, but I guess being a network engineer has its perks, huh. I’ve been on my own for almost a few hours now and I was beginning to lose hope that I’d ever be able to find a sane human being on this forsaken rock!', '', ''],
   //3
-  ['Sorry, sorry, I realize that I’m a complete stranger and getting a call right of the blue from a random person sounds pretty sketchy huh. But please don’t hang up! I need your help badly! My name is (INSERT CHARACTER NAME HERE) and I was assigned to checkout the frequent blackouts here in Graham, Pierce County, Washington state. The call specifically mentioned this house’s address. There have been unsettling reports about this place, maybe it’s just local superstition, I honestly don’t know, but what I do know is that I want to get out of this house and being stuck in the basement is about the exact opposite of getting out.', '', ''],
+  ['Sorry, sorry, I realize that I’m a complete stranger and getting a call right of the blue from a random person sounds pretty sketchy huh. But please don’t hang up! I need your help badly! My name is NAME OF CHARACTER  and I was assigned to checkout the frequent blackouts here in Graham, Pierce County, Washington state. The call specifically mentioned this house’s address. There have been unsettling reports about this place, maybe it’s just local superstition, I honestly don’t know, but what I do know is that I want to get out of this house and being stuck in the basement is about the exact opposite of getting out.', '', ''],
   //4
   ['There’s a single door, but it’s locked, and it’s heavy, but maybe I can find something to bust the hinges. Give me a few minutes to check out the area… [ NAME is exploring ]', 'I had to give a few minutes to adjust my eyes to the dimly lit garage, but now I can see that there is a rather large air vent high up on the wall above a tool rack. The metal track that the garage door is on is rusted to the point where the metal’s fused together. The short of it is that that’s not an option unless I want to make a lot of noise. And I don’t. I could try to clear out some of the debris in front of the door that, I assume, opens into the house itself.', 'Alright, I found a screw driver and unscrewed the hinges. It took a while, but I managed to get the hinges off. What I wasn’t able to do, was stop the door from falling on the floor and making a really loud bang. I don’t think I’ve ever felt so unsettled by a combination of a really loud noise followed by absolute silence.'],
   //5
@@ -98,9 +98,9 @@ var option = [
   //19
   ['A) Wait...  what?', 'B) Then, I guess return!'],
   //20
-  ['A) Play again', 'B) Go back to menu'],
+  ['A) Play again', 'B) Go back to home'],
   //21
-  ['A) Play again', 'B) Go back to menu']];
+  ['A) Play again', 'B) Go back to home']];
 
 //global vars
 // var background = document.getElementById('back');
@@ -239,7 +239,7 @@ function handleAction2() {
     action2.onclick = function(){
       window.location.href = 'index.html';
     };
-    action2.onclick();
+    action2.onclick(); //ALSO NEED TO CLEAR LOCAL STORAGE so the next person has a clean slate
   }
   for (var i = 0; i < allScreens.length; i++) {
     if(('s' + i) === renderedSit.getAttribute('id')) {
