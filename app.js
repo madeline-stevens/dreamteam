@@ -210,5 +210,10 @@ function handleAction2() {
     render(20);
   } else if ('s18' === renderedSit.getAttribute('id')) {
     render(19);
+  } else if ('s20' === renderedSit.getAttribute('id') || 's21' === renderedSit.getAttribute('id')) {
+    action2.onclick = function(){
+      window.location.href = 'index.html';
+    };
+    action2.onclick();
   }
 }
