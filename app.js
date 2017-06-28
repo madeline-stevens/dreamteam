@@ -1,12 +1,12 @@
 var allScreens = [];
 
-// arrays for backrounds //
-var background = [
-  // 0 //
-  [IntroDrawingABlank.jpg],
-
-  // 1 //
-  [href = 'https://giphy.com/gifs/rain-window-rainy-day-gRnSZSRzOJeG4']];
+//arrays for backrounds
+// var background = [
+//   // 0 //
+//   [IntroDrawingABlank.jpg],
+//
+//   // 1 //
+//   [href = 'https://giphy.com/gifs/rain-window-rainy-day-gRnSZSRzOJeG4']];
 
 //array for situation
 var situation = [
@@ -103,7 +103,7 @@ var option = [
   ['A) Play again', 'B) Go back to menu']];
 
 //global vars
-var background = document.getElementById('back');
+// var background = document.getElementById('back');
 var body = document.getElementById('body');
 var setResp = document.getElementById('response');
 var setSit = document.getElementById('sit');
@@ -113,7 +113,7 @@ var action1 = document.getElementById('choice1');
 var action2 = document.getElementById('choice2');
 
 function Screen(index) {
-  this.background = background[index];
+  // this.background = background[index];
   this.situation = situation[index];
   this.option = option[index];
 
@@ -138,7 +138,7 @@ function render(i) {
   action1.textContent = allScreens[i].option[0];
   action2.textContent = allScreens[i].option[1];
 
-  renderBack.appendChild(setBack);
+  // renderBack.appendChild(setBack);
   renderedSit.appendChild(setResp);
   renderedSit.appendChild(setSit);
   renderedSit.appendChild(extra);
@@ -146,7 +146,15 @@ function render(i) {
   renderedSit.appendChild(action2);
 }
 
-render(0);
+if(localStorage.currentScreen) {
+  for (var i = 0; i < allScreens.length; i++) {
+    if (allScreens[i].situation[0] === JSON.parse(localStorage.currentScreen).situation[0]) {
+      render(i);
+    }
+  }
+} else {
+  render(0);
+}
 
 //clear screen
 // function clear(){
@@ -189,6 +197,11 @@ function handleAction1() {
   } else if ('s20' === renderedSit.getAttribute('id') || 's21' === renderedSit.getAttribute('id')) {
     render(0);
   }
+  for (var i = 0; i < allScreens.length; i++) {
+    if(('s' + i) === renderedSit.getAttribute('id')) {
+      localStorage.currentScreen = JSON.stringify(allScreens[i]);
+    }
+  }
 }
 
 function handleAction2() {
@@ -227,5 +240,13 @@ function handleAction2() {
       window.location.href = 'index.html';
     };
     action2.onclick();
+  }
+  for (var i = 0; i < allScreens.length; i++) {
+    if(('s' + i) === renderedSit.getAttribute('id')) {
+      localStorage.currentScreen = JSON.stringify(allScreens[i]);
+    }
+    if ('s20' === renderedSit.getAttribute('id') || 's21' === renderedSit.getAttribute('id')) {
+      localStorage.clear();
+    }
   }
 }
