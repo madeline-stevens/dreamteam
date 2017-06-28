@@ -211,6 +211,13 @@ function handleAction2() {
   } else if ('s18' === renderedSit.getAttribute('id')) {
     render(19);
   } else if ('s20' === renderedSit.getAttribute('id') || 's21' === renderedSit.getAttribute('id')) {
+<<<<<<< HEAD
     //GO TO MENU
+=======
+    action2.onclick = function(){
+      window.location.href = 'index.html';
+    };
+    action2.onclick();
+>>>>>>> bf93233d072bf7124aa0ae311ac67ab9c108d55e
   }
 }
