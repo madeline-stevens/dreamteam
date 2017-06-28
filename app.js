@@ -43,7 +43,9 @@ var situation = [
   //19
   ['Oh no! The bottom falls out from beneath you and you find yourself falling endlessly. It seems you have found yourself in an infinite loop. There’s only one thing to do.... return!', '', ''],
   //20
-  ['You suddenly wake up and find yourself in Code Fellows 201 class with a pool of drool on your desk. Everyone’s eyes turn to you distracted by the loud sound you made from your sudden awakening.', 'Congratulations! You have really taken your learning to the next step!', '']];
+  ['You suddenly wake up and find yourself in Code Fellows 201 class with a pool of drool on your desk. Everyone’s eyes turn to you distracted by the loud sound you made from your sudden awakening.', 'Congratulations! You have really taken your learning to the next step!', ''],
+  //21
+  ['put in message that indicates the user failed', '', '']];
 //array for the options that go with the situations
 
 var option = [
@@ -86,9 +88,11 @@ var option = [
   //18
   ['A) Go check it!', 'B) Open the door and enter!'],
   //19
-  ['A) Wait...  what?', 'B) Infinite loop? Where are you?'],
+  ['A) Wait...  what?', 'B) Then, I guess return!'],
   //20
-  ['A) Play again', 'B) Go back to main screen']];
+  ['A) Play again', 'B) Go back to menu'],
+  //21
+  ['A) Play again', 'B) Go back to menu']];
 
 //global vars
 var body = document.getElementById('body');
@@ -165,7 +169,13 @@ function handleAction1() {
   } else if ('s14' === renderedSit.getAttribute('id')) {
     render(15);
   } else if ('s13' === renderedSit.getAttribute('id') || 's15' === renderedSit.getAttribute('id') || 's16' === renderedSit.getAttribute('id')) {
-    //THE USER FAILED
+    render(21);
+  } else if ('s12' === renderedSit.getAttribute('id') || 's18' === renderedSit.getAttribute('id')) {
+    render(17);
+  } else if ('s17' === renderedSit.getAttribute('id') || 's19' === renderedSit.getAttribute('id')) {
+    render(20);
+  } else if ('s20' === renderedSit.getAttribute('id') || 's21' === renderedSit.getAttribute('id')) {
+    render(0);
   }
 }
 
@@ -191,6 +201,14 @@ function handleAction2() {
   } else if ('s11' === renderedSit.getAttribute('id')) {
     render(14);
   } else if ('s13' === renderedSit.getAttribute('id') || 's15' === renderedSit.getAttribute('id') || 's16' === renderedSit.getAttribute('id')) {
-    //THE USER FAILED
+    render(21);
+  } else if ('s14' === renderedSit.getAttribute('id')) {
+    render(16);
+  } else if ('s12' === renderedSit.getAttribute('id')) {
+    render(18);
+  } else if ('s17' === renderedSit.getAttribute('id') || 's19' === renderedSit.getAttribute('id')) {
+    render(20);
+  } else if ('s18' === renderedSit.getAttribute('id')) {
+    render(19);
   }
 }
