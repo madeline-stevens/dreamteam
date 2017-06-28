@@ -108,26 +108,29 @@ li a {
 }
 
 .team div {
-  background-image: url('imgs/windowboard.png');
+  background-image: url('imgs/hdprofile-board1.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 10px auto;
-  width: 85%;
-  height: 300px;
+  margin: 0 auto;
+  width: 98%;
+  height: 210px;
 }
 
 .team img {
   display: inline;
-  border: 1px solid green;
+  border-style: 1px solid black;
+  border-radius: 50%;
+  position: relative;
+  top: 3%;
+  margin: 0 5%;
 }
 
 .profile {
-  border: 1px dashed purple;
   display: inline-block;
   width: 60%;
   position: relative;
-  bottom: 20%;
+  bottom: 15%;
 }
 
 .profile p {
@@ -142,26 +145,37 @@ li a {
 }
 
 #Maddy {
-  border-radius: 25px;
-  border: 5px groove silver;
+  transform:rotate(-1deg);
+  border-radius: 10px;
+  border: 1px groove black;
+  margin: .5%;
 }
 
 #Rachael {
-  border-radius: 25px;
-  border: 5px groove silver;
+  transform:rotate(-5deg);
+  border-radius: 10px;
+  border: 5px groove black;
+  margin-top: 3%;
 }
 
 #Aaron {
-  border-radius: 25px;
-  border: 5px groove silver;
+  transform:rotate(4deg);
+  border-radius: 10px;
+  border: 5px groove black;
+  margin-top: 20%;
 }
 
 #Frederick {
-  border-radius: 25px;
-  border: 5px groove silver;
+  transform:rotate(-1deg);
+  border-radius: 10px;
+  border: 5px groove black;
+  margin-top: 4%;
 }
 
 #Isaiah {
-  border-radius: 25px;
-  border: 5px groove silver;
+  transform:rotate(2deg);
+  border-radius: 10px;
+  border: 5px groove black;
+  margin-top: 3%;
+  margin-bottom: 2%;
 }
