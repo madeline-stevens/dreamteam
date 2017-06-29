@@ -9,6 +9,20 @@ var allScreens = [];
 //   [href = 'https://giphy.com/gifs/rain-window-rainy-day-gRnSZSRzOJeG4']];
 
 //array for situation
+var textDiv = $("#textDiv"),
+    sentence = textDiv.html().split(""),
+    tl = new TimelineMax({repeat:10, repeatDelay:0.4, yoyo:true});
+
+TweenLite.set(textDiv, {css:{perspective:500, perspectiveOrigin:"50% 50%", transformStyle:"preserve-3d"}});
+textDiv.html("");
+
+$.each(sentence, function(index, val) {
+			if(val === " ") {
+				val = "&nbsp;";			}
+			var letter = $("<span/>", {id : "txt" + index}).html(val).appendTo(textDiv);
+   tl.to(letter, 1, {autoAlpha:1, ease:Back.easeOut,  fadeIn:0, transformOrigin:"50% 50% -20"}, index * 0.05);
+});
+//Above is the jQuery used for the desired animation (is not calling anything yet)
 var situation = [
   //0
   ['Have you ever caught yourself drawing a blank; the feeling of finding yourself  doing something, and yet, you don’t remember what that something was. , You lean back in your chair and stare blankly at the ceiling, watching the fan above you turn lazily, making a soft creak  as it continues its endless specific intent.. It’s somehow, relatable to the situation; chasing the thought  that you were supposed to be doing with no particular understanding of why…', 'And then I heard something else, something distinct, something that does indeed sound definite, the sound of footsteps crunching slowly on the loose gravel path the lead towards the house.', 'Hello…? Hello? Is anyone on the other end of this?'],
