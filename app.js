@@ -50,6 +50,20 @@ var background = [
   ['imgs/window.jpg']];
 
 //array for situation
+var textDiv = $("#textDiv"),
+    sentence = textDiv.html().split(""),
+    tl = new TimelineMax({repeat:10, repeatDelay:0.4, yoyo:true});
+
+TweenLite.set(textDiv, {css:{perspective:500, perspectiveOrigin:"50% 50%", transformStyle:"preserve-3d"}});
+textDiv.html("");
+
+$.each(sentence, function(index, val) {
+			if(val === " ") {
+				val = "&nbsp;";			}
+			var letter = $("<span/>", {id : "txt" + index}).html(val).appendTo(textDiv);
+   tl.to(letter, 1, {autoAlpha:1, ease:Back.easeOut,  fadeIn:0, transformOrigin:"50% 50% -20"}, index * 0.05);
+});
+//Above is the jQuery used for the desired animation (is not calling anything yet)
 var situation = [
   //0
   ['Have you ever caught yourself drawing a blank? You lean back in your chair and stare blankly trying to remember which room you are in and how you got there', 'And then I heard something else, something distinct, something that does indeed sound definite, the sound of a faint, crackly voice coming from a forgotten comm collecting cobwebs in the corner of this unknown room. You pick up the comm and hear this voice say...', 'Hello…? Hello? Is anyone on the other end of this?'],
