@@ -64,7 +64,7 @@ header ul li {
   margin: 10px;
 }
 
-header ul li:active, header ul li:hover {
+/*header ul li:active, header ul li:hover {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
@@ -72,7 +72,7 @@ header ul li:active, header ul li:hover {
 header ul li:focus, header ul li:focus {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
-}
+}*/
 
 
 li a {
@@ -92,13 +92,13 @@ li a {
    -webkit-animation: levitate 1s linear infinite alternate;
  }*/
 
- /*a:hover {*/
-   /*background-color: maroon;
+ /*a:hover {
+   background-color: maroon;
    color: black;
    duration: 200ms;
- }*/
+ }
 
- /*@-webkit-keyframes levitate {
+ @-webkit-keyframes levitate {
    from {
      transform: translateY(6.9px);
    }
@@ -128,7 +128,7 @@ li a {
    height: 500px;
  }
 
-#body {
+#gameContainer {
   background: white;
   width: 90%;
   margin: 2% auto;
@@ -194,6 +194,7 @@ li a {
   margin: .5%;
 }
 
+
 #Rachael {
   transform:rotate(-5deg);
   border-radius: 10px;
@@ -223,24 +224,22 @@ li a {
   margin-bottom: 2%;
 }
 
-#story {
+#storyContainer {
   background: #ddd;
   width: 70%;
   height: 380px;
   margin: 10px auto;
   border-radius: 25%;
   border: 3px outset silver;
-  position: relative;
-  left: 150px;
 }
 
-#comm {
+/*#comm {
   position: absolute;
   left: 10%;
   top: 500px;
-}
+}*/
 
-#body p {
+#gameContainer p {
   font-family: 'Indie Flower', cursive;
   color: black;
   width: 60%;
@@ -251,12 +250,12 @@ li a {
   left: 150px;
 }
 
-#body button {
+#gameContainer button {
   display: block;
   margin: 50px auto;
   width: 400px;
 }
 
-#body button:hover {
+#gameContainer button:hover {
   background: purple;
 }

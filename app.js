@@ -301,3 +301,31 @@ $.each(sentence, function(index, val) {
 			var letter = $("<span/>", {id : "txt" + index}).html(val).appendTo(textManipulation);
    tl.to(letter, 1, {autoAlpha:1, ease:Back.easeOut,  fadeIn:0, transformOrigin:"50% 50% -20"}, index * 0.05);
 });
+
+var textManipulation = $("#situationParagraph"),
+    sentence = textManipulation.html().split(""),
+    tl = new TimelineMax({repeat:3, repeatDelay:0.4, yoyo:true});
+
+TweenLite.set(textManipulation, {css:{perspective:500, perspectiveOrigin:"50% 50%", transformStyle:"preserve-3d"}});
+textManipulation.html("");
+
+$.each(sentence, function(index, val) {
+			if(val === " ") {
+				val = "&nbsp;";			}
+			var letter = $("<span/>", {id : "txt" + index}).html(val).appendTo(textManipulation);
+   tl.to(letter, 1, {autoAlpha:1, ease:Back.easeOut,  fadeIn:0, transformOrigin:"50% 50% -20"}, index * 0.05);
+});
+
+var textManipulation = $("#paragraph3"),
+    sentence = textManipulation.html().split(""),
+    tl = new TimelineMax({repeat:3, repeatDelay:0.4, yoyo:true});
+
+TweenLite.set(textManipulation, {css:{perspective:500, perspectiveOrigin:"50% 50%", transformStyle:"preserve-3d"}});
+textManipulation.html("");
+
+$.each(sentence, function(index, val) {
+			if(val === " ") {
+				val = "&nbsp;";			}
+			var letter = $("<span/>", {id : "txt" + index}).html(val).appendTo(textManipulation);
+   tl.to(letter, 1, {autoAlpha:1, ease:Back.easeOut,  fadeIn:0, transformOrigin:"50% 50% -20"}, index * 0.05);
+});
