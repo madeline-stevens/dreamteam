@@ -194,6 +194,17 @@ li a {
   margin: .5%;
 }
 
+button {
+  border: none;
+  padding: 5px 15px;
+  background: #1C95E0;
+  color: white;
+  border-radius: 3px;
+  font-size: 10px;
+  margin: 12px 12px 12px 12px;
+  transition: 350ms all;
+  cursor: pointer;
+}
 
 #Rachael {
   transform:rotate(-5deg);
