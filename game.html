@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <title>Who's Outside!?</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="nav.css"/> -->
     <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.0/TweenMax.min.js"></script>
   </head>
   <body>
 
@@ -13,18 +17,23 @@
         <h1>Who's Outside?!</h1>
         <nav>
           <ul>
-            <li><a href="index.html">Menu</a></li>
-            <li><a href="#">Game</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#">GAME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <section id="body">
-      <p id="response"></p>
-      <p id="sit"></p>
-      <p id="extra"></p>
+    <section id="gameContainer">
+      <img id="bkgImg">
+      <div id="storyContainer">
+        <p id="paragraph1"></p>
+        <p id="situationParagraph"></p>
+        <p id="paragraph3"></p>
+      </div>
+      <img id="comm" src="imgs\commdevice.jpg"/>
+
       <button id="choice1"></button>
       <button id="choice2"></button>
     </section>
