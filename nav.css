@@ -1,0 +1,105 @@
+header {
+  background: url('imgs/spookyhouse.jpg');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 25px;
+  border: 5px groove silver;
+  width: 90%;
+  height: 300px;
+  margin: 0 auto;
+}
+
+header div {
+  position: relative;
+  top: 25px;
+  left: 25px;
+}
+
+/*header div nav {
+  border: 1px solid red;
+}*/
+
+header h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 3.3em;
+  color: rgb(102, 6, 6);
+  margin-bottom: 20px;
+}
+
+header nav {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+header ul {
+  display: inline;
+  padding: 0;
+}
+
+
+header ul li {
+  display: inline;
+  color: white;
+  /*background: rgba(1, 25, 16, .95);*/
+  background: #777;
+  opacity: .7;
+  color: black;
+  border: 2px solid black;
+  border-radius: 10%;
+  padding: 15px;
+  margin: 10px;
+}
+
+header ul li:active, header ul li:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+header ul li:focus, header ul li:focus {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+
+li a {
+  color: white;
+  text-decoration: none;
+}
+
+ li:hover {
+   background-color: maroon;
+   color: black;
+   duration: 200ms;
+   animation-name: levitate;
+   animation-duration: 1s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   -webkit-animation: levitate 1s linear infinite alternate;
+ }
+
+ a:hover {
+   background-color: maroon;
+   color: black;
+   duration: 200ms;
+ }
+
+ @-webkit-keyframes levitate {
+   from {
+     transform: translateY(6.9px);
+   }
+   to {
+     background: yellow;
+   }
+ }
+
+ @keyframes levitate {
+   from {
+     transform: translateY(6.9px);
+   }
+   to {
+     background: yellow;
+   }
+ }
