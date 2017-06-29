@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <title>Who's Outside!?</title>
@@ -10,9 +11,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.0/TweenMax.min.js"></script>
   </head>
+
   <body>
 
     <header>
+
       <div>
         <h1>Who's Outside?!</h1>
         <nav>
@@ -23,11 +26,11 @@
           </ul>
         </nav>
       </div>
+
     </header>
 
     <section id="about">
       <div class="team">
-
         <div id="Maddy">
           <img src="imgs\Maddy-profile.png"/>
           <article class="profile">
@@ -46,24 +49,64 @@
         <div id="Aaron">
           <img src="imgs\Aaron-profile.png"/>
           <article class="profile">
-            <p><span>Aaron</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p><span>Aaron</span>He's awesome...</p>
           </article>
         </div>
 
-        <div id="Frederick">
-          <img src="imgs\Frederick-profile.png"/>
+        <!-- <div id="Frederick">
           <article class="profile">
-            <p><span>Frederick</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p><span>Frederick</span>"Feel free to connnect"</p>
           </article>
+        </div> -->
+
+        <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="discoverfrederickthomas">
+          <a class="LI-simple-link" href='https://www.linkedin.com/in/discoverfrederickthomas?trk=profile-badge'>Frederick D. Thomas, Jr.
+          </a>
+          <p>"Feel free to connect."</p>
         </div>
+
         <div id="Isaiah">
           <img src="imgs\Isaiah-profile.png"/>
           <article class="profile">
-            <p><span>Isaiah</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p><span>Isaiah</span>A great leader- Brother...</p>
           </article>
         </div>
       </div>
     </section>
 
+    <script src="app.js"></script>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer>
+    </script>
+
+    <video src="http://www.jibjab.com/view/OCBRkBpsPWtu185SNfdh
+" autoplay poster="img/US_Happy.jpg">
+      <button id="playPause" type="button" data-state="play">Play/Pause
+      </button>
+
+      <button id="stop" type="button" data-state="stop">Stop
+      </button>
+
+      <div class="progress">
+         <progress id="progress" value="0" min="0">
+            <span id="progress-bar">
+            </span>
+         </progress>
+      </div>
+
+      <button id="mute" type="button" data-state="mute">Mute/Unmute
+      </button>
+
+      <button id="volinc" type="button" data-state="volup">Vol+
+      </button>
+
+      <button id="voldec" type="button" data-state="voldown">Vol-
+      </button>
+
+      <button id="full" type="button" data-state="go-fullscreen">Fullscreen
+      </button>
+      </div>
+    </video>
+
   </body>
+
 </html>

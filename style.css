@@ -209,12 +209,12 @@ li a {
   margin-top: 20%;
 }
 
-#Frederick {
+/*#Frederick {
   transform:rotate(-1deg);
   border-radius: 10px;
   border: 5px groove black;
   margin-top: 4%;
-}
+}*/
 
 #Isaiah {
   transform:rotate(2deg);
