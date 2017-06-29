@@ -1,37 +1,78 @@
+'use strict';
+
 var allScreens = [];
 
 //arrays for backrounds
-// var background = [
-//   // 0 //
-//   [IntroDrawingABlank.jpg],
-//
-//   // 1 //
-//   [href = 'https://giphy.com/gifs/rain-window-rainy-day-gRnSZSRzOJeG4']];
+var background = [
+  //0
+  ['imgs/window.jpg'],
+  //1
+  ['imgs/raininghouse.gif'],
+  //2
+  ['imgs/spookyhouse.jpg'],
+  //3
+  ['imgs/window.jpg'],
+  //4
+  ['imgs/raininghouse.gif'],
+  //5
+  ['imgs/spookyhouse.jpg'],
+  //6
+  ['imgs/window.jpg'],
+  //7
+  ['imgs/raininghouse.gif'],
+  //8
+  ['imgs/spookyhouse.jpg'],
+  //9
+  ['imgs/window.jpg'],
+  //10
+  ['imgs/raininghouse.gif'],
+  //11
+  ['imgs/spookyhouse.jpg'],
+  //12
+  ['imgs/window.jpg'],
+  //13
+  ['imgs/raininghouse.gif'],
+  //14
+  ['imgs/spookyhouse.jpg'],
+  //15
+  ['imgs/window.jpg'],
+  //16
+  ['imgs/raininghouse.gif'],
+  //17
+  ['imgs/spookyhouse.jpg'],
+  //18
+  ['imgs/window.jpg'],
+  //19
+  ['imgs/raininghouse.gif'],
+  //20
+  ['imgs/spookyhouse.jpg'],
+  //21
+  ['imgs/window.jpg']];
 
 //array for situation
 var situation = [
   //0
-  ['Have you ever caught yourself drawing a blank; the feeling of finding yourself  doing something, and yet, you don’t remember what that something was. , You lean back in your chair and stare blankly at the ceiling, watching the fan above you turn lazily, making a soft creak  as it continues its endless specific intent.. It’s somehow, relatable to the situation; chasing the thought  that you were supposed to be doing with no particular understanding of why…', 'And then I heard something else, something distinct, something that does indeed sound definite, the sound of footsteps crunching slowly on the loose gravel path the lead towards the house.', 'Hello…? Hello? Is anyone on the other end of this?'],
+  ['Have you ever caught yourself drawing a blank? You lean back in your chair and stare blankly trying to remember which room you are in and how you got there', 'And then I heard something else, something distinct, something that does indeed sound definite, the sound of a faint, crackly voice coming from a forgotten comm collecting cobwebs in the corner of this unknown room. You pick up the comm and hear this voice say...', 'Hello…? Hello? Is anyone on the other end of this?'],
   //1
   ['Oh wow! I can’t believe it! It actually connected with someone! You don’t know how relieved I am to hear another human being! Please, I need your help…', '', ''],
   //2
   ['I found this old comm. It was dead when I first discovered it. I thought I could fix it up, it looked all busted and broken, but I guess being a network engineer has its perks, huh. I’ve been on my own for almost a few hours now and I was beginning to lose hope that I’d ever be able to find a sane human being on this forsaken rock!', '', ''],
   //3
-  ['Sorry, sorry, I realize that I’m a complete stranger and getting a call right of the blue from a random person sounds pretty sketchy huh. But please don’t hang up! I need your help badly! My name is NAME OF CHARACTER  and I was assigned to checkout the frequent blackouts here in Graham, Pierce County, Washington state. The call specifically mentioned this house’s address. There have been unsettling reports about this place, maybe it’s just local superstition, I honestly don’t know, but what I do know is that I want to get out of this house and being stuck in the basement is about the exact opposite of getting out.', '', ''],
+  ['Sorry, sorry, I realize that I’m a complete stranger and getting a call right of the blue from a random person sounds pretty sketchy huh? But please don’t hang up! I need your help badly! My name is Sammy and I was assigned to checkout the frequent blackouts here in Graham, Pierce County, Washington state. The call specifically mentioned this house’s address. There have been unsettling reports about this place, maybe it’s just local superstition, I honestly don’t know, but what I do know is that I want to get out of this house and being stuck in the basement is about the exact opposite of getting out.', '', ''],
   //4
-  ['There’s a single door, but it’s locked, and it’s heavy, but maybe I can find something to bust the hinges. Give me a few minutes to check out the area… [ NAME is exploring ]', 'I had to give a few minutes to adjust my eyes to the dimly lit garage, but now I can see that there is a rather large air vent high up on the wall above a tool rack. The metal track that the garage door is on is rusted to the point where the metal’s fused together. The short of it is that that’s not an option unless I want to make a lot of noise. And I don’t. I could try to clear out some of the debris in front of the door that, I assume, opens into the house itself.', 'Alright, I found a screw driver and unscrewed the hinges. It took a while, but I managed to get the hinges off. What I wasn’t able to do, was stop the door from falling on the floor and making a really loud bang. I don’t think I’ve ever felt so unsettled by a combination of a really loud noise followed by absolute silence.'],
+  ['There’s a single door, but it’s locked, and it’s heavy, but maybe I can find something to bust the hinges. Give me a few minutes to check out the area… [Sammy is exploring]', 'I had to give a few minutes to adjust my eyes to the dimly lit garage, but now I can see that there is a rather large air vent high up on the wall above a tool rack. The metal track that the garage door is on is rusted to the point where the metal’s fused together. The short of it is that that’s not an option unless I want to make a lot of noise, and I don’t want to. I could try to clear out some of the debris in front of the door that, I assume, opens into the house itself.', 'Alright, I found a screw driver and unscrewed the hinges. It took a while, but I managed to get the hinges off. What I wasn’t able to do, was stop the door from falling on the floor and making a really loud bang. I don’t think I’ve ever felt so unsettled by a combination of a really loud noise followed by absolute silence.'],
   //5
-  ['Believe me, if I were in your shoes, I’d probably have never picked up in the first place. But I’m begging you to just help me out here, or at least keep me company. This place has an unsettling air to it. Let me look around and find out if there’s some way I can escape from here. [ NAME is exploring ]', 'I discovered a door, it’s heavy and the door has no handle on this side. It’s just a key lock. The hinges look breakable though, I’ll see if I can find something to break them...', 'Alright, I found a screw driver and unscrewed the hinges. It took a while, but I managed to get the hinges off. What I wasn’t able to do, was stop the door from falling on the floor and making a really loud bang. I don’t think I’ve ever felt so unsettled by a combination of a really loud noise followed by absolute silence.'],
+  ['Believe me, if I were in your shoes, I’d probably have never picked up in the first place. But I’m begging you to just help me out here, or at least keep me company. Let me look around and find out if there’s some way I can escape from here. [Sammy is exploring]', 'I discovered a door, it’s heavy and the door has no handle on this side. It’s just a key lock. The hinges look breakable though, I’ll see if I can find something to break them...', 'Alright, I found a screw driver and unscrewed the hinges. It took a while, but I managed to get the hinges off. What I wasn’t able to do, was stop the door from falling on the floor and making a really loud bang. I don’t think I’ve ever felt so unsettled by a combination of a really loud noise followed by absolute silence.'],
   //6
-  ['I wish I was, but unfortunately, this house is old, supposedly built by some lunatic baron back in the 30’s. This town is has a huge mining quarry and the basement is connected to a long narrow tunnel that travels to the central mine, which is how I got in. I guess this guy was the local foreman or something. Clearly he had a lot of money.', 'I guess I’m going through the mansion then… Did I mention the fact that I don’t like big, old, spooky-looking houses? *Sigh* Alright, lets do this', 'Alright the door led into a hallway, I haven’t been inside this house yet...well, until now of course, but like I said, I hate spooky houses….and now I’m in one. Wonderful. What was I saying? Yeah, I guess all the windows are boarded up because I can’t see any light. Either that or it’s dark outside and I spent more time in that basement than I realize. Wonderful, I’m walking through a spooky house, it’s dark in here, and it’s probably dark outside now too.'],
+  ['I wish I was, but unfortunately, this house is old, supposedly built by some lunatic baron back in the 30’s. This town is has a huge mining quarry and the basement is connected to a long narrow tunnel that travels to the central mine, which is how I got in. I guess this guy was the local foreman or something. Clearly he had a lot of money.', 'Alright the door led into a hallway, I haven’t been inside this house yet...well, until now of course. Yeah, I guess all the windows are boarded up because I can’t see any light. Either that or it’s dark outside and I spent more time in that basement than I realize.', ''],
   //7
-  ['I honestly have no idea why my boss chose me. I’m just going to assume he’s just a big thumb sucker, along with the fact that he doesn’t like me very much. If I caught myself going out with my wife, I’d probably hate me too. This place is remote, and apparently can’t afford to have it’s own flippin’ electrical repair company!', 'I guess I’m going through the mansion then… Did I mention the fact that I don’t like big, old, spooky-looking houses? *Sigh* Alright, lets do this', 'Alright the door led into a hallway, I haven’t been inside this house yet...well, until now of course, but like I said, I hate spooky houses….and now I’m in one. Wonderful. What was I saying? Yeah, I guess all the windows are boarded up because I can’t see any light. Either that or it’s dark outside and I spent more time in that basement than I realize. Wonderful, I’m walking through a spooky house, it’s dark in here, and it’s probably dark outside now too.'],
+  ['I honestly have no idea why my boss chose me. I’m just going to assume that he doesn’t like me very much. This place is remote, and apparently there are no other electrical repair companies nearby!', 'I guess I’m going through the mansion then. *Sigh* Alright, lets do this', 'Okay, the door led into a hallway, I haven’t been inside this house yet...well, until now of course. What Yeah, I guess all the windows are boarded up because I can’t see any light. Either that or it’s dark outside and I spent more time in that basement than I realize.'],
   //8
-  ['Ah of course! Thanks for reminding me. I just remembered, that I have my toolkit flashlight with me. I’m not sure how much longer the batteries are going to last since I used it while attempting to repair the dilapidated fuse box, the comm, and walking 	down that long tunnel, but it should have enough juice for now at least. I will continue to do some exploring and get back to you in a few… [NAME is exploring ]', '', ''],
+  ['Ah of course! Thanks for reminding me. I just remembered, that I have my toolkit flashlight with me. I’m not sure how much longer the batteries are going to last since I used it while attempting to repair the dilapidated fuse box, the comm, and walking 	down that long tunnel, but it should have enough juice for now at least. I will continue to do some exploring and get back to you in a few… [Sammy is exploring]', '', ''],
   //9
-  ['Alright, I can’t see anything very well at all, but I will make the valiant attempt….(crash) OUCH!', '', ''],
+  ['Alright, I can’t see anything very well at all, but I will make the valiant attempt...(crash) OUCH!', '', ''],
   //10
-  ['Augh! It’s fine, I just tripped over some wood scantlings and fell flat on my face! But I’m alright now I think, just a bruise here and there. If only I have a light or something...Ah! I remember now! I have a flashlight in my pocket. It’s mostly drained because I used it a lot today, but it should have enough juice for now at least. I will continue to do some exploring and get back to you in a few…', 'As I was walking down the hall, I kept passing by all these doors. I wasn’t quite sure which one I should try so I just kind of looked into each one. Honestly, they all look about the same, empty, except for a few chairs, tables, a book stand here or there. So far, none of the doors lead to the outside and I haven’t seen any windows yet, boarded up or otherwise. This mansion might be a lot bigger than it appeared to be at a distance. I think I’m in the living room now. There’s four doors in here, including the one I just entered from, and still no windows… What was that!?', ''],
+  ['Augh! It’s fine, I just tripped over some wood scantlings and fell flat on my face! But I’m alright now I think, just a bruise here and there. If only I have a light or something...Ah! I remember now! I have a flashlight in my pocket. It’s mostly drained because I used it a lot today, but it should have enough juice for now at least. I will continue to do some exploring and get back to you in a few…', 'As I was walking down the hall, I kept passing by all these doors. I wasn’t quite sure which one I should try so I just kind of looked into each one. Honestly, they all look about the same, empty, except for a few chairs, tables, a book stand here or there. So far, none of the doors lead to the outside and I haven’t seen any windows yet, boarded up or otherwise. I think I’m in the living room now. There’s four doors in here, including the one I just entered from, and still no windows... What was that!?', ''],
   //11
   ['That door, it just closed behind me! I left it open, like wide open to leave a sort of trail back in case I needed to retrace my steps, but it just shut!', '', ''],
   //12
@@ -53,7 +94,7 @@ var situation = [
   //20
   ['You suddenly wake up and find yourself in Code Fellows 201 class with a pool of drool on your desk. Everyone’s eyes turn to you distracted by the loud sound you made from your sudden awakening.', 'Congratulations! You have really taken your learning to the next step!', ''],
   //21
-  ['put in message that indicates the user failed', '', '']];
+  ['Everything went dark. It happened so fast.', 'When you do not get a response from the other end, you realized you have failed to save Sammy.', '']];
 //array for the options that go with the situations
 
 var option = [
@@ -103,8 +144,8 @@ var option = [
   ['A) Play again', 'B) Go back to home']];
 
 //global vars
-// var background = document.getElementById('back');
 var body = document.getElementById('body');
+var setBack = document.getElementById('bkgImg');
 var setResp = document.getElementById('response');
 var setSit = document.getElementById('sit');
 var extra = document.getElementById('extra');
@@ -113,7 +154,7 @@ var action1 = document.getElementById('choice1');
 var action2 = document.getElementById('choice2');
 
 function Screen(index) {
-  // this.background = background[index];
+  this.background = background[index];
   this.situation = situation[index];
   this.option = option[index];
 
@@ -129,8 +170,10 @@ for (var i = 0; i < situation.length; i++) {
 var renderedSit = document.createElement('section');
 function render(i) {
   renderedSit.setAttribute('id', 's' + i);
-  // renderBack.setAttribute('id', 'b ' + i);
   body.appendChild(renderedSit);
+
+  setBack.setAttribute('src', allScreens[i].background);
+
   setResp.textContent = allScreens[i].situation[0];
   setSit.textContent = allScreens[i].situation[1];
   extra.textContent = allScreens[i].situation[2];
@@ -155,11 +198,6 @@ if(localStorage.currentScreen) {
 } else {
   render(0);
 }
-
-//clear screen
-// function clear(){
-//   renderedSit.innerHTML = '';
-// }
 
 //Event listener/handling for click to move to next screen
 action1.addEventListener('click', handleAction1);
@@ -244,9 +282,6 @@ function handleAction2() {
   for (var i = 0; i < allScreens.length; i++) {
     if(('s' + i) === renderedSit.getAttribute('id')) {
       localStorage.currentScreen = JSON.stringify(allScreens[i]);
-    }
-    if ('s20' === renderedSit.getAttribute('id') || 's21' === renderedSit.getAttribute('id')) {
-      localStorage.clear();
     }
   }
 }
