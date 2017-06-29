@@ -50,19 +50,7 @@ var background = [
   ['imgs/window.jpg']];
 
 //array for situation
-var textDiv = $("#textDiv"),
-    sentence = textDiv.html().split(""),
-    tl = new TimelineMax({repeat:10, repeatDelay:0.4, yoyo:true});
 
-TweenLite.set(textDiv, {css:{perspective:500, perspectiveOrigin:"50% 50%", transformStyle:"preserve-3d"}});
-textDiv.html("");
-
-$.each(sentence, function(index, val) {
-			if(val === " ") {
-				val = "&nbsp;";			}
-			var letter = $("<span/>", {id : "txt" + index}).html(val).appendTo(textDiv);
-   tl.to(letter, 1, {autoAlpha:1, ease:Back.easeOut,  fadeIn:0, transformOrigin:"50% 50% -20"}, index * 0.05);
-});
 //Above is the jQuery used for the desired animation (is not calling anything yet)
 var situation = [
   //0
@@ -158,11 +146,11 @@ var option = [
   ['A) Play again', 'B) Go back to home']];
 
 //global vars
-var body = document.getElementById('body');
+var body = document.getElementById('gameContainer');
 var setBack = document.getElementById('bkgImg');
-var setResp = document.getElementById('response');
-var setSit = document.getElementById('sit');
-var extra = document.getElementById('extra');
+var setResp = document.getElementById('paragraph1');
+var setSit = document.getElementById('situationParagraph');
+var extra = document.getElementById('paragraph3');
 
 var action1 = document.getElementById('choice1');
 var action2 = document.getElementById('choice2');
@@ -299,3 +287,17 @@ function handleAction2() {
     }
   }
 }
+
+var textManipulation = $("#paragraph1"),
+    sentence = textManipulation.html().split(""),
+    tl = new TimelineMax({repeat:3, repeatDelay:0.4, yoyo:true});
+
+TweenLite.set(textManipulation, {css:{perspective:500, perspectiveOrigin:"50% 50%", transformStyle:"preserve-3d"}});
+textManipulation.html("");
+
+$.each(sentence, function(index, val) {
+			if(val === " ") {
+				val = "&nbsp;";			}
+			var letter = $("<span/>", {id : "txt" + index}).html(val).appendTo(textManipulation);
+   tl.to(letter, 1, {autoAlpha:1, ease:Back.easeOut,  fadeIn:0, transformOrigin:"50% 50% -20"}, index * 0.05);
+});
