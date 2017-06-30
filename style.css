@@ -219,8 +219,8 @@ li a {
 .profile span {
   display: block;
   font-family: 'Creepster', cursive;
-  font-size: 2em;
-  color: rgb(102, 6, 6);
+  font-size: 3em;
+  color: rgb(15, 148, 3);
 }
 
 #Maddy {
@@ -261,6 +261,11 @@ button {
   border-radius: 10px;
   border: 5px groove black;
   margin-top: 4%;
+}
+
+#Frederick a {
+  color: rgb(7, 136, 164);
+  font-weight: bold;
 }
 
 #Isaiah {
@@ -308,7 +313,7 @@ button {
 }
 
 #txt0 {
-  margin-left: 17%;
+  margin-left: 1.5%;
 }
 
 #textDiv span{
@@ -317,6 +322,6 @@ button {
   position:relative;
   top:20px;
   visibility:hidden;
-  font-size:36px;
+  font-size: 57px;
   -webkit-font-smoothing:antialiased;
 }

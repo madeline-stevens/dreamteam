@@ -1,6 +1,6 @@
 var textDiv = $("#textDiv"),
     sentence = textDiv.html().split(""),
-    tl = new TimelineMax({repeat:10, repeatDelay:0.4, yoyo:true});
+    tl = new TimelineMax({repeat:15, repeatDelay:0.4, yoyo:true});
 
 TweenLite.set(textDiv, {css:{perspective:500, perspectiveOrigin:"50% 50%", transformStyle:"preserve-3d"}});
 textDiv.html("");
