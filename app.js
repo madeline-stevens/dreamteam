@@ -54,7 +54,7 @@ var background = [
 //Above is the jQuery used for the desired animation (is not calling anything yet)
 var situation = [
   //0
-  ['Have you ever caught yourself drawing a blank? You lean back in your chair and stare blankly trying to remember which room you are in and how you got there', 'And then I heard something else, something distinct, something that does indeed sound definite, the sound of a faint, crackly voice coming from a forgotten comm collecting cobwebs in the corner of this unknown room. You pick up the comm and hear this voice say...', 'Hello…? Hello? Is anyone on the other end of this?'],
+  ['Have you ever caught yourself drawing a blank? You lean back in your chair and stare blankly trying to remember which room you are in and how you got there', ' and then I heard something else, something distinct, something that does indeed sound definite, the sound of a faint, crackly voice coming from a forgotten comm collecting cobwebs in the corner of this unknown room. You pick up the comm and hear this voice say...', 'Hello…? Hello? Is anyone on the other end of this?'],
   //1
   ['Oh wow! I can’t believe it! It actually connected with someone! You don’t know how relieved I am to hear another human being! Please, I need your help…', '', ''],
   //2
@@ -146,7 +146,7 @@ var option = [
   ['A) Play again', 'B) Go back to home']];
 
 //global vars
-var body = document.getElementById('gameContainer');
+var gameContainer = document.getElementById('gameContainer');
 var setBack = document.getElementById('bkgImg');
 var setResp = document.getElementById('paragraph1');
 var setSit = document.getElementById('situationParagraph');
@@ -172,9 +172,10 @@ for (var i = 0; i < situation.length; i++) {
 var renderedSit = document.createElement('section');
 function render(i) {
   renderedSit.setAttribute('id', 's' + i);
-  body.appendChild(renderedSit);
+  console.log('renderedSit runs', renderedSit);
+  gameContainer.appendChild(renderedSit);
 
-  setBack.setAttribute('src', allScreens[i].background);
+  // setBack.setAttribute('src', allScreens[i].background);
 
   setResp.textContent = allScreens[i].situation[0];
   setSit.textContent = allScreens[i].situation[1];
@@ -288,44 +289,16 @@ function handleAction2() {
   }
 }
 
-var textManipulation = $("#paragraph1"),
-    sentence = textManipulation.html().split(""),
-    tl = new TimelineMax({repeat:3, repeatDelay:0.4, yoyo:true});
+var textDiv = $("#textDiv"),
+    sentence = textDiv.html().split(""),
+    tl = new TimelineMax({repeat:10, repeatDelay:0.4, yoyo:true});
 
-TweenLite.set(textManipulation, {css:{perspective:500, perspectiveOrigin:"50% 50%", transformStyle:"preserve-3d"}});
-textManipulation.html("");
-
-$.each(sentence, function(index, val) {
-			if(val === " ") {
-				val = "&nbsp;";			}
-			var letter = $("<span/>", {id : "txt" + index}).html(val).appendTo(textManipulation);
-   tl.to(letter, 1, {autoAlpha:1, ease:Back.easeOut,  fadeIn:0, transformOrigin:"50% 50% -20"}, index * 0.05);
-});
-
-var textManipulation = $("#situationParagraph"),
-    sentence = textManipulation.html().split(""),
-    tl = new TimelineMax({repeat:3, repeatDelay:0.4, yoyo:true});
-
-TweenLite.set(textManipulation, {css:{perspective:500, perspectiveOrigin:"50% 50%", transformStyle:"preserve-3d"}});
-textManipulation.html("");
+TweenLite.set(textDiv, {css:{perspective:500, perspectiveOrigin:"50% 50%", transformStyle:"preserve-3d"}});
+textDiv.html("");
 
 $.each(sentence, function(index, val) {
 			if(val === " ") {
 				val = "&nbsp;";			}
-			var letter = $("<span/>", {id : "txt" + index}).html(val).appendTo(textManipulation);
-   tl.to(letter, 1, {autoAlpha:1, ease:Back.easeOut,  fadeIn:0, transformOrigin:"50% 50% -20"}, index * 0.05);
-});
-
-var textManipulation = $("#paragraph3"),
-    sentence = textManipulation.html().split(""),
-    tl = new TimelineMax({repeat:3, repeatDelay:0.4, yoyo:true});
-
-TweenLite.set(textManipulation, {css:{perspective:500, perspectiveOrigin:"50% 50%", transformStyle:"preserve-3d"}});
-textManipulation.html("");
-
-$.each(sentence, function(index, val) {
-			if(val === " ") {
-				val = "&nbsp;";			}
-			var letter = $("<span/>", {id : "txt" + index}).html(val).appendTo(textManipulation);
+			var letter = $("<span/>", {id : "txt" + index}).html(val).appendTo(textDiv);
    tl.to(letter, 1, {autoAlpha:1, ease:Back.easeOut,  fadeIn:0, transformOrigin:"50% 50% -20"}, index * 0.05);
 });

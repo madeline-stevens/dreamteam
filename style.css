@@ -5,6 +5,31 @@
   transition: all .1s;
 }
 
+#paragraph1 {
+  color: white;
+  font-size: 30px;
+}
+
+#situationParagraph {
+  color: white;
+  font-size: 30px;
+}
+
+#paragraph3 {
+  color: white;
+  font-size: 30px;
+}
+
+#choice1 {
+  font-size: 25px;
+  border-radius: 5px;
+}
+
+#choice2 {
+  font-size: 25px;
+  border-radius: 5px;
+}
+
 body {
   background: #111;
   min-width: 1250px;
@@ -129,7 +154,7 @@ li a {
  }
 
 #gameContainer {
-  background: white;
+  background: #003252;
   width: 90%;
   margin: 2% auto;
   border-radius: 25px;
@@ -224,14 +249,14 @@ li a {
   margin-bottom: 2%;
 }
 
-#storyContainer {
+/*#storyContainer {
   background: #ddd;
   width: 70%;
   height: 380px;
   margin: 10px auto;
   border-radius: 25%;
   border: 3px outset silver;
-}
+}*/
 
 /*#comm {
   position: absolute;
@@ -258,4 +283,18 @@ li a {
 
 #gameContainer button:hover {
   background: purple;
+}
+
+#txt0 {
+  margin-left: 17%;
+}
+
+#textDiv span{
+  margin-bottom: 3%;
+  display: inline-block;
+  position:relative;
+  top:20px;
+  visibility:hidden;
+  font-size:36px;
+  -webkit-font-smoothing:antialiased;
 }
