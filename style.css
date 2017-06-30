@@ -1,3 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .1s;
+}
+
+#paragraph1 {
+  color: white;
+  font-size: 30px;
+}
+
+#situationParagraph {
+  color: white;
+  font-size: 30px;
+}
+
+#paragraph3 {
+  color: white;
+  font-size: 30px;
+}
+
+#choice1 {
+  font-size: 25px;
+  border-radius: 5px;
+}
+
+#choice2 {
+  font-size: 25px;
+  border-radius: 5px;
+}
+
 body {
   background: #111;
   min-width: 1250px;
@@ -43,6 +75,7 @@ header ul {
   padding: 0;
 }
 
+
 header ul li {
   display: inline;
   color: white;
@@ -56,22 +89,57 @@ header ul li {
   margin: 10px;
 }
 
+/*header ul li:active, header ul li:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+header ul li:focus, header ul li:focus {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}*/
+
+
 li a {
   color: white;
   text-decoration: none;
 }
 
- li:hover {
+ /*li:hover {
+   background-color: maroon;
+   color: black;
+   duration: 200ms;
+   animation-name: levitate;
+   animation-duration: 1s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   -webkit-animation: levitate 1s linear infinite alternate;
+ }*/
+
+ /*a:hover {
    background-color: maroon;
    color: black;
    duration: 200ms;
  }
 
- a:hover {
-   background-color: maroon;
-   color: black;
-   duration: 200ms;
+ @-webkit-keyframes levitate {
+   from {
+     transform: translateY(6.9px);
+   }
+   to {
+     background: yellow;
+   }
  }
+
+ @keyframes levitate {
+   from {
+     transform: translateY(6.9px);
+   }
+   to {
+     background: yellow;
+   }
+ }*/
 
  #index {
    background-image: url('imgs/raininghouse.gif');
@@ -85,18 +153,13 @@ li a {
    height: 500px;
  }
 
-#body {
-  background: white;
+#gameContainer {
+  background: #003252;
   width: 90%;
   margin: 2% auto;
   border-radius: 25px;
   border: 5px groove silver;
-  height: 500px;
-
-  #fan {
-    background-color: url(/Users/SuperCodingNinja/github/repos/dreamteam/imgs/IntroDrawingABlank.jpg);
-    background-size: contain;
-  }
+  height: auto;
 }
 
 #about {
@@ -156,6 +219,7 @@ li a {
   margin: .5%;
 }
 
+
 #Rachael {
   transform:rotate(-5deg);
   border-radius: 10px;
@@ -183,4 +247,54 @@ li a {
   border: 5px groove black;
   margin-top: 3%;
   margin-bottom: 2%;
+}
+
+/*#storyContainer {
+  background: #ddd;
+  width: 70%;
+  height: 380px;
+  margin: 10px auto;
+  border-radius: 25%;
+  border: 3px outset silver;
+}*/
+
+/*#comm {
+  position: absolute;
+  left: 10%;
+  top: 500px;
+}*/
+
+#gameContainer p {
+  font-family: 'Indie Flower', cursive;
+  color: black;
+  width: 60%;
+  margin: 25px auto;
+  display: block;
+  position: relative;
+  bottom: 370px;
+  left: 150px;
+}
+
+#gameContainer button {
+  display: block;
+  margin: 50px auto;
+  width: 400px;
+}
+
+#gameContainer button:hover {
+  background: purple;
+}
+
+#txt0 {
+  margin-left: 17%;
+}
+
+#textDiv span{
+  margin-bottom: 3%;
+  display: inline-block;
+  position:relative;
+  top:20px;
+  visibility:hidden;
+  font-size:36px;
+  -webkit-font-smoothing:antialiased;
 }
