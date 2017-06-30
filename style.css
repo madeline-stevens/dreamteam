@@ -8,6 +8,7 @@
 #paragraph1 {
   color: white;
   font-size: 30px;
+  padding-left: 30px;
 }
 
 #situationParagraph {
@@ -18,6 +19,7 @@
 #paragraph3 {
   color: white;
   font-size: 30px;
+  padding-left: 30px;
 }
 
 #choice1 {
@@ -292,7 +294,7 @@ button {
   display: block;
   position: relative;
   bottom: 370px;
-  left: 150px;
+  left: 170px;
 }
 
 #gameContainer button {
