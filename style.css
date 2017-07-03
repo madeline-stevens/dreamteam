@@ -325,3 +325,15 @@ button {
   font-size: 57px;
   -webkit-font-smoothing:antialiased;
 }
+
+a {
+  color: blue;
+  font-size: 2em;
+  font-family: cursive;
+}
+
+a:hover {
+  color: white;
+  font-size: 3em;
+  font-family: fantasy;
+}
