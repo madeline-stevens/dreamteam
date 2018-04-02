@@ -1,14 +1,14 @@
 # dreamteam
-## Who's Outside?! game
+Who's Outside?! game
 
 madhubs.github.io/dreamteam/game.html
 
-## PROJECT PROPOSAL
-## Due: Monday, June 26, 12pm
+PROJECT PROPOSAL
+Due: Monday, June 26, 12pm
 
-## Team name: Dream team
-## Teammates: Rachael, Frederick, Aaron B., Isaiah, Maddy
- 	`
+Team name: Dream team
+Teammates: Rachael, Frederick, Aaron B., Isaiah, Maddy
+ 	
 ## Game name:
 The ‘Who’s outside?’ game!  
 
