@@ -1,17 +1,18 @@
 # dreamteam
-Who's Outside?! game by Frederick, Rachael, Isaiah, Aaron B, Maddy
+## Who's Outside?! game
 
 madhubs.github.io/dreamteam/game.html
 
-PROJECT PROPOSAL
-Due: Monday, June 26, 12pm
+## PROJECT PROPOSAL
+## Due: Monday, June 26, 12pm
 
-Team name: Dream team
-Teammates: Rachael, Frederick, Aaron B., Isaiah, Maddy
+## Team name: Dream team
+## Teammates: Rachael, Frederick, Aaron B., Isaiah, Maddy
  	`
-Game name:
+## Game name:
 The ‘Who’s outside?’ game!  
-Introduction/situation: Have you ever caught yourself drawing a blank; ythe feeling  of finding yourself  doing something, and yet,  you  don’t remember  what that something was. , You  lean  back in your chair and stare blankly at the ceiling, watching the fan above you turn lazily, making a soft creak  as it continues its endless specific intent.. It’s somehow, relatable to the situation; chasing the thought  you were supposed to be doing with no particular understanding of why…
+
+Introduction/situation: Have you ever caught yourself drawing a blank; the feeling of finding yourself doing something, and yet,  you  don’t remember what that something was. You lean back in your chair and stare blankly at the ceiling, watching the fan above you turn lazily, making a soft creak as it continues its endless specific intent.. It’s somehow, relatable to the situation; chasing the thought  you were supposed to be doing with no particular understanding of why…
 
 optional:   The rain taps the window panes. Doing it’s thing everything else, with no definate purpose perhaps. You hear the wind play its woeful melody as if calling to no one in particular, but anyone who would bare listen to it.
 Situation: And then you hear something else, something distinct, something that does indeed sound definate, the sound of a foot crunching on gravel. (cut to the “what you would do” choices?)
