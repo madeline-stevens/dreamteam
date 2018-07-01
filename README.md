@@ -1,7 +1,7 @@
 # dreamteam
 Who's Outside?! game
 
-madhubs.github.io/dreamteam/game.html
+[madhubs.github.io/dreamteam/game.html](madhubs.github.io/dreamteam/game.html)
 
 PROJECT PROPOSAL
 Due: Monday, June 26, 12pm
